@@ -2,43 +2,12 @@ import React, { useState, useEffect } from 'react';
 import './App.css'
 import services from './components/home';
 import {
-  ArrowRight,
-  Play,
-  Star,
-  Users,
-  TrendingUp,
-  Target,
-  Instagram,
-  Facebook,
-  Twitter,
-  Youtube,
-  MessageCircle,
-  Camera,
-  BarChart3,
-  Mail,
-  CheckCircle,
-  Award,
-  Heart,
-  ChevronDown,
-  Menu,
-  X,
-  Sparkles,
-  Zap,
-  Eye,
-  Share2
+  ArrowRight, Play, Star, Users, TrendingUp, Target, Instagram, Facebook, Twitter, Youtube, MessageCircle, Camera, BarChart3, Mail, CheckCircle, Award, Heart, ChevronDown, Menu, X, Sparkles, Zap, Eye, Share2
 } from 'lucide-react';
 
 
 const DigitalGramWebsite = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [activeService, setActiveService] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setActiveService((prev) => (prev + 1) % services.length);
-    }, 4000);
-    return () => clearInterval(interval);
-  }, []);
+ 
 
   return (
     <div className="min-h-screen bg-white">
@@ -389,3 +358,6 @@ const DigitalGramWebsite = () => {
     </div>
   );
 };
+
+// Add this export
+export default DigitalGramWebsite;
