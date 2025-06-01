@@ -1,0 +1,286 @@
+/* See Our Work Page Styles */
+
+/* Container */
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Navigation Container */
+.nav-container {
+  padding: 20px 0;
+}
+
+/* Work Hero Section */
+.work-hero {
+  padding: 60px 0;
+  text-align: center;
+  background-color: #fdf2f8;
+}
+
+.work-hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.back-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 24px;
+  background: none;
+  border: 1px solid #ec4899;
+  color: #ec4899;
+  transition: all 0.3s ease;
+}
+
+.back-button:hover {
+  background: #ec4899;
+  color: white;
+}
+
+.back-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.work-title {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  color: #1e293b;
+}
+
+.work-title span {
+  color: #ec4899;
+}
+
+.work-subtitle {
+  font-size: 1.25rem;
+  color: #64748b;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Featured Work Section */
+.featured-work {
+  padding: 80px 0;
+}
+
+.featured-work h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 60px;
+  color: #1e293b;
+}
+
+.featured-work h2 span {
+  color: #ec4899;
+}
+
+.case-studies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+}
+
+.case-study-card {
+  background-color: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.case-study-card:hover {
+  transform: translateY(-10px);
+}
+
+.case-study-card.featured {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+.case-image {
+  height: 200px;
+  background-color: #ec4899;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.case-study-card.featured .case-image {
+  height: auto;
+}
+
+.case-image.linkedin {
+  background-color: #0077b5;
+}
+
+.case-image.facebook {
+  background-color: #1877f2;
+}
+
+.case-image.youtube {
+  background-color: #ff0000;
+}
+
+.case-image.twitter {
+  background-color: #1da1f2;
+}
+
+.platform-icon {
+  width: 60px;
+  height: 60px;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.platform-icon svg {
+  width: 30px;
+  height: 30px;
+  color: #ec4899;
+}
+
+.case-image.linkedin .platform-icon svg {
+  color: #0077b5;
+}
+
+.case-image.facebook .platform-icon svg {
+  color: #1877f2;
+}
+
+.case-image.youtube .platform-icon svg {
+  color: #ff0000;
+}
+
+.case-image.twitter .platform-icon svg {
+  color: #1da1f2;
+}
+
+.case-content {
+  padding: 30px;
+}
+
+.case-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.case-header h3 {
+  font-size: 1.5rem;
+  color: #1e293b;
+  margin: 0;
+}
+
+.case-tag {
+  background-color: #fdf2f8;
+  color: #ec4899;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.case-description {
+  color: #64748b;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.case-metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 20px;
+}
+
+.metric {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.metric-icon {
+  width: 25px;
+  height: 25px;
+  color: #ec4899;
+}
+
+.metric h4 {
+  font-size: 1.2rem;
+  color: #1e293b;
+  margin: 0;
+}
+
+.metric p {
+  font-size: 0.8rem;
+  color: #64748b;
+  margin: 0;
+}
+
+/* CTA Section */
+.work-cta {
+  padding: 80px 0;
+  text-align: center;
+  background-color: #fdf2f8;
+  margin: 60px 0 0;
+  border-radius: 12px;
+}
+
+.work-cta h2 {
+  font-size: 2.5rem;
+  color: #1e293b;
+  margin-bottom: 20px;
+}
+
+.work-cta p {
+  font-size: 1.2rem;
+  color: #64748b;
+  max-width: 600px;
+  margin: 0 auto 30px;
+}
+
+.primary-button {
+  background-color: #ec4899;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.primary-button:hover {
+  background-color: #db2777;
+  transform: translateY(-3px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .work-title {
+    font-size: 2.5rem;
+  }
+  
+  .case-study-card.featured {
+    grid-template-columns: 1fr;
+  }
+  
+  .case-study-card.featured .case-image {
+    height: 200px;
+  }
+  
+  .case-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}

@@ -554,3 +554,142 @@ button:focus-visible {
     grid-template-columns: 1fr;
   }
 }
+
+/* Add these styles to the end of your home.css file */
+
+/* Success Story Section */
+.success-story-section {
+  padding: 80px 20px;
+  background-color: #fff;
+}
+
+.success-story-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #1e293b;
+}
+
+.success-story-section h2 span {
+  color: #ec4899;
+}
+
+.section-subtitle {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 60px;
+  color: #64748b;
+  font-size: 1.1rem;
+}
+
+.success-stories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.success-story-card {
+  background-color: #fdf2f8;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.success-story-card:hover {
+  transform: translateY(-10px);
+}
+
+.story-image {
+  height: 200px;
+  background-color: #ec4899;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-placeholder {
+  width: 80px;
+  height: 80px;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.story-icon {
+  width: 40px;
+  height: 40px;
+  color: #ec4899;
+}
+
+.story-content {
+  padding: 30px;
+}
+
+.story-content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #1e293b;
+}
+
+.story-client {
+  font-size: 1rem;
+  color: #ec4899;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.story-description {
+  color: #64748b;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.story-metrics {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.metric {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.metric-icon {
+  width: 30px;
+  height: 30px;
+  color: #ec4899;
+}
+
+.metric h4 {
+  font-size: 1.5rem;
+  color: #1e293b;
+  margin: 0;
+}
+
+.metric p {
+  font-size: 0.9rem;
+  color: #64748b;
+  margin: 0;
+}
+
+.success-cta {
+  text-align: center;
+  margin-top: 60px;
+}
+
+@media (max-width: 768px) {
+  .success-stories-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .story-metrics {
+    grid-template-columns: 1fr;
+  }
+}

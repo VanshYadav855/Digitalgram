@@ -8,10 +8,16 @@ import {
   Heart,
   Share2,
   Linkedin,
-  PenTool
+  PenTool,
+  TrendingUp,
+  BarChart2,
+  Users,
+  Award
 } from 'lucide-react';
 import NavBar from './components/navBar';
 import About from './pages/about';
+import SeeOurWork from './pages/seeOurWork';
+import Footbar from './components/footbar';
 
 const DigitalGramWebsite = () => {
   const [currentPage, setCurrentPage] = useState('home');
@@ -24,6 +30,10 @@ const DigitalGramWebsite = () => {
   // Render different pages based on currentPage state
   if (currentPage === 'about') {
     return <About navigateTo={navigateTo} />;
+  }
+  
+  if (currentPage === 'work') {
+    return <SeeOurWork navigateTo={navigateTo} />;
   }
 
   return (
@@ -227,6 +237,89 @@ const DigitalGramWebsite = () => {
           </div>
         </div>
       </section>
+
+      {/* Success Story Section */}
+      <section className="success-story-section">
+        <h2>Success <span>Stories</span></h2>
+        <p className="section-subtitle">Real results from real clients who trusted us with their social media presence</p>
+        
+        <div className="success-stories-grid">
+          <div className="success-story-card">
+            <div className="story-image">
+              <div className="image-placeholder">
+                <TrendingUp className="story-icon" />
+              </div>
+            </div>
+            <div className="story-content">
+              <h3>500% Growth in 6 Months</h3>
+              <p className="story-client">Fashion Retailer</p>
+              <p className="story-description">
+                A boutique fashion brand came to us with 5,000 Instagram followers and stagnant growth. 
+                Within 6 months, we grew their account to 30,000 followers with a 300% increase in 
+                engagement and a 250% boost in website traffic from social media.
+              </p>
+              <div className="story-metrics">
+                <div className="metric">
+                  <BarChart2 className="metric-icon" />
+                  <div>
+                    <h4>500%</h4>
+                    <p>Follower Growth</p>
+                  </div>
+                </div>
+                <div className="metric">
+                  <Users className="metric-icon" />
+                  <div>
+                    <h4>300%</h4>
+                    <p>Engagement Rate</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div className="success-story-card">
+            <div className="story-image">
+              <div className="image-placeholder">
+                <Award className="story-icon" />
+              </div>
+            </div>
+            <div className="story-content">
+              <h3>$1.2M in Revenue from LinkedIn</h3>
+              <p className="story-client">B2B Software Company</p>
+              <p className="story-description">
+                A B2B SaaS company struggled to generate leads through social media. Our LinkedIn 
+                strategy generated 200+ qualified leads in the first quarter, resulting in $1.2M 
+                in new business within 12 months.
+              </p>
+              <div className="story-metrics">
+                <div className="metric">
+                  <BarChart2 className="metric-icon" />
+                  <div>
+                    <h4>200+</h4>
+                    <p>Qualified Leads</p>
+                  </div>
+                </div>
+                <div className="metric">
+                  <Users className="metric-icon" />
+                  <div>
+                    <h4>$1.2M</h4>
+                    <p>Revenue Generated</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div className="success-cta">
+          <button className="primary-button" onClick={() => navigateTo('work')}>
+            See More Success Stories
+          </button>
+        </div>
+      </section>
+      
+      {/* Footer */}
+      <Footbar />
     </div>
   );
 };

@@ -46,6 +46,7 @@ const NavBar = ({ navigateTo }) => {
           <a href="#" onClick={() => handleNavigation('home')}>Home</a>
           <a href="#services" onClick={() => setIsMenuOpen(false)}>Services</a>
           <a href="#" onClick={() => handleNavigation('about')}>About</a>
+          <a href="#" onClick={() => handleNavigation('work')}>Our Work</a>
           <a href="#contact" onClick={() => setIsMenuOpen(false)}>Contact</a>
           <button className="mobile-cta" onClick={() => setIsMenuOpen(false)}>
             Start Your Campaign
