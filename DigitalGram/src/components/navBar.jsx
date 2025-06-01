@@ -7,6 +7,11 @@ const NavBar = ({ navigateTo }) => {
   const handleNavigation = (page) => {
     if (navigateTo) {
       navigateTo(page);
+    } else {
+      // If navigateTo prop is not provided, use window.location
+      if (page === 'home') {
+        window.location.href = '/';
+      }
     }
     setIsMenuOpen(false);
   };

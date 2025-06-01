@@ -1,0 +1,229 @@
+/* About Page Container */
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Navigation Container */
+.nav-container {
+  padding: 20px 0;
+}
+
+/* About Hero Section */
+.about-hero {
+  padding: 60px 0;
+  text-align: center;
+  background-color: #fdf2f8;
+}
+
+.about-hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.back-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 24px;
+  background: none;
+  border: 1px solid #ec4899;
+  color: #ec4899;
+  transition: all 0.3s ease;
+}
+
+.back-button:hover {
+  background: #ec4899;
+  color: white;
+}
+
+.back-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.about-title {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  color: #1e293b;
+}
+
+.about-title span {
+  color: #ec4899;
+}
+
+.about-subtitle {
+  font-size: 1.25rem;
+  color: #64748b;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Our Story Section */
+.our-story {
+  padding: 80px 0;
+  background-color: white;
+}
+
+.story-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.story-text h2 {
+  font-size: 2.5rem;
+  color: #1e293b;
+  margin-bottom: 24px;
+}
+
+.story-text p {
+  color: #64748b;
+  margin-bottom: 16px;
+  line-height: 1.7;
+}
+
+.story-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  text-align: center;
+}
+
+.stat-item h3 {
+  font-size: 2.5rem;
+  color: #ec4899;
+  margin-bottom: 8px;
+}
+
+.stat-item p {
+  color: #64748b;
+  font-size: 1.1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .story-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .about-title {
+    font-size: 2.5rem;
+  }
+
+  .story-text h2 {
+    font-size: 2rem;
+  }
+
+  .stat-item h3 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .story-stats {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+
+/* Add these styles to the existing about.css file */
+
+/* Navigation styles */
+.nav-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #ec4899;
+}
+
+.logo-icon {
+  color: #ec4899;
+}
+
+.menu-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 5px;
+}
+
+.menu-button span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #1e293b;
+  transition: all 0.3s ease;
+}
+
+/* Values section styles */
+.our-values {
+  padding: 80px 0;
+  background-color: #fdf2f8;
+}
+
+.values-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.values-content h2 {
+  font-size: 2.5rem;
+  color: #1e293b;
+  margin-bottom: 50px;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+}
+
+.value-card {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.value-card:hover {
+  transform: translateY(-10px);
+}
+
+.value-icon {
+  width: 50px;
+  height: 50px;
+  color: #ec4899;
+  margin-bottom: 20px;
+}
+
+.value-card h3 {
+  font-size: 1.5rem;
+  color: #1e293b;
+  margin-bottom: 15px;
+}
+
+.value-card p {
+  color: #64748b;
+  line-height: 1.6;
+}

@@ -1,12 +1,13 @@
 import React from 'react';
 import { Heart, Users, Target, Award, ArrowLeft } from 'lucide-react';
 import NavBar from '../components/navBar';
+import '../css/about.css';
 
-const About = () => {
+const About = ({ navigateTo }) => {
   return (
     <div className="app-container">
       <nav className="nav-container">
-        <NavBar />
+        <NavBar navigateTo={navigateTo} />
       </nav>
 
       {/* About Hero Section */}

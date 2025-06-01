@@ -23,7 +23,7 @@ const DigitalGramWebsite = () => {
 
   // Render different pages based on currentPage state
   if (currentPage === 'about') {
-    return <About />;
+    return <About navigateTo={navigateTo} />;
   }
 
   return (
