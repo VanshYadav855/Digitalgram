@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Heart, X } from 'lucide-react';
+import { X } from 'lucide-react';
 
 const NavBar = ({ navigateTo }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -20,7 +20,7 @@ const NavBar = ({ navigateTo }) => {
     <nav className="nav-container">
       <div className="nav-content">
         <div className="logo" onClick={() => handleNavigation('home')} style={{cursor: 'pointer'}}>
-          <Heart className="logo-icon" />
+          <img src="/logo.png" alt="DigitalGram Logo" className="logo-image" />
           <span>DigitalGram</span>
         </div>
         <button 
@@ -48,9 +48,9 @@ const NavBar = ({ navigateTo }) => {
           <a href="#" onClick={() => handleNavigation('about')}>About</a>
           <a href="#" onClick={() => handleNavigation('work')}>Our Work</a>
           <a href="#contact" onClick={() => setIsMenuOpen(false)}>Contact</a>
-          <button className="mobile-cta" onClick={() => setIsMenuOpen(false)}>
-            Start Your Campaign
-          </button>
+          <div className="mobile-cta">
+            <button className="primary-button">Get Started</button>
+          </div>
         </div>
       )}
     </nav>

@@ -1,6 +1,7 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* Remove these three lines */
+/* @tailwind base; */
+/* @tailwind components; */
+/* @tailwind utilities; */
 
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -86,12 +87,29 @@ button:focus-visible {
   align-items: center;
 }
 
+/* Logo styling */
 .logo {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  font-weight: 600;
-  color: #ec4899;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #1e293b;
+}
+
+.logo-image {
+  height: 40px;
+  width: auto;
+}
+
+@media (max-width: 640px) {
+  .logo-image {
+    height: 32px;
+  }
+  
+  .logo span {
+    font-size: 1.2rem;
+  }
 }
 
 .logo-icon {
@@ -331,25 +349,69 @@ button:focus-visible {
   font-size: 0.875rem;
 }
 
-/* Services Section */
+/* Services Section - Sophisticated Redesign with Pink Theme */
 .services-section {
-  padding: 4rem 2rem;
+  padding: 6rem 2rem;
   background: #fdf2f8;
+  position: relative;
+  overflow: hidden;
+}
+
+.services-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #ec4899, transparent);
+}
+
+.services-section::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #ec4899, transparent);
 }
 
 .services-section h2 {
   text-align: center;
   font-size: 2.5rem;
   font-weight: 700;
-  margin-bottom: 3rem;
+  margin-bottom: 1.5rem;
+  color: #1e293b;
+  position: relative;
+}
+
+.services-section h2::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, #ec4899, #f472b6);
 }
 
 .services-section h2 span {
   color: #ec4899;
 }
 
+.services-section .section-subtitle {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 4rem;
+  color: #64748b;
+  font-size: 1.1rem;
+}
+
 .services-grid {
   display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
   max-width: 1200px;
   margin: 0 auto;
@@ -357,9 +419,108 @@ button:focus-visible {
 
 .service-card {
   background: white;
-  padding: 2rem;
-  border-radius: 1rem;
+  padding: 2.5rem 2rem;
+  border-radius: 0.75rem;
   transition: all 0.3s ease;
+  border: 1px solid #f3f4f6;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, #ec4899, #f472b6);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 25px -5px rgba(236, 72, 153, 0.1), 0 10px 10px -5px rgba(236, 72, 153, 0.04);
+  border-color: #fce7f3;
+}
+
+.service-card:hover::after {
+  transform: scaleX(1);
+}
+
+.service-icon {
+  background: #fdf2f8;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.service-card:hover .service-icon {
+  background: #fbcfe8;
+}
+
+.service-icon svg {
+  width: 28px;
+  height: 28px;
+  color: #ec4899;
+}
+
+.service-card h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #1e293b;
+}
+
+.service-card p {
+  color: #64748b;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  flex-grow: 1;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #475569;
+  font-size: 0.95rem;
+}
+
+.feature-item .dot {
+  width: 8px;
+  height: 8px;
+  background-color: #ec4899;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+@media (max-width: 1024px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .service-card:hover {

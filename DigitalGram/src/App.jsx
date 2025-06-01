@@ -1,3 +1,4 @@
+// Update the logo in the NavBar component
 import React, { useState } from 'react';
 import './css/home.css'
 import {
@@ -5,9 +6,9 @@ import {
   Facebook,
   Twitter,
   Youtube,
-  Heart,
   Share2,
   Linkedin,
+  Heart,
   PenTool,
   TrendingUp,
   BarChart2,
@@ -94,9 +95,10 @@ const DigitalGramWebsite = () => {
         </div>
       </section>
 
-      {/* Services Section */}
+      {/* Services Section - Updated with subtitle */}
       <section className="services-section">
         <h2>Our <span>Social Media</span> Services</h2>
+        <p className="section-subtitle">Strategic solutions tailored to elevate your brand's digital presence across all platforms</p>
         <div className="services-grid">
           <div className="service-card">
             <div className="service-icon">

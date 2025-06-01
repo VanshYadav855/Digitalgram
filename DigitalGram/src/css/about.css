@@ -227,3 +227,130 @@
   color: #64748b;
   line-height: 1.6;
 }
+
+/* Team Section Styles */
+.team-section {
+  padding: 80px 0;
+  background-color: white;
+}
+
+.team-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #1e293b;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.team-section h2::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: #ec4899;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.team-member {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  transition: transform 0.3s ease;
+  border: 1px solid #f3f4f6;
+}
+
+.team-member:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(236, 72, 153, 0.1);
+  border-color: #fce7f3;
+}
+
+.member-avatar {
+  width: 100px;
+  height: 100px;
+  background-color: #fdf2f8;
+  color: #ec4899;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 0 auto 20px;
+  border: 3px solid #ec4899;
+}
+
+.team-member h3 {
+  font-size: 1.5rem;
+  color: #1e293b;
+  margin-bottom: 5px;
+}
+
+.team-member p {
+  color: #ec4899;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.team-member span {
+  display: block;
+  color: #64748b;
+  font-size: 0.9rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* About CTA section styling enhancement */
+.about-cta {
+  padding: 80px 0;
+  text-align: center;
+  background-color: #fdf2f8;
+}
+
+.about-cta h2 {
+  font-size: 2.5rem;
+  color: #1e293b;
+  margin-bottom: 20px;
+}
+
+.about-cta p {
+  color: #64748b;
+  max-width: 600px;
+  margin: 0 auto 30px;
+  font-size: 1.1rem;
+}
+
+/* Logo styling */
+.logo-image {
+  height: 40px;
+  width: auto;
+}
+
+@media (max-width: 640px) {
+  .logo-image {
+    height: 32px;
+  }
+}
